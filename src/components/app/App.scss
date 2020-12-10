@@ -1,0 +1,104 @@
+@import './../../scss/variables';
+
+.wrapper{
+    padding: 15px 0px 5px 0px;
+    .videos-wrapper{
+        margin-top: 50px;
+        padding: 0;
+        .package {
+            font-size: 12px;
+        }
+        .selectpackage{
+            margin: 10px 0px 0px 0px;
+            min-height: 81px;
+        }
+    }
+}
+
+.video-app-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    a {
+        text-decoration: none;
+        color: $black;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .video-item{
+        display: block;
+        height: 240px;
+        margin: 20px 0px;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        .label{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .video-item-image{
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border: 1px solid $borderColor;
+            // width: 100%;
+            max-width: 320px;
+        }
+        .video-item-desc{
+            max-width: 320px;
+            padding: 0px 5px;
+            .label{
+                font-weight: $bold;
+                font-size: 16px;
+                margin: 5px 0px;
+            }
+            .description{
+                font-family: $font-montserrat-light;
+                margin: 5px 0px;
+                display: block;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 12px;
+            }
+        }
+    }
+
+  
+  .video-item:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  
+}
+
+.btn-wrapper{
+    text-align: left;
+    .w--button{
+        height: auto;
+        padding: 10px;
+    } 
+}
+
+@media only screen and (min-width: $screen-width-xxs + 1) {
+    .wrapper{
+        padding: 0;
+        .videos-wrapper{
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+    .btn-wrapper{
+        text-align: left;   
+        margin-left: 20px;
+    }
+    
+}

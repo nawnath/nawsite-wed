@@ -1,0 +1,12 @@
+@import './../../scss/variables';
+
+.no-access-wrapper{
+    background-color: $white;
+    .no-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 66px;
+        height: 100vh;
+    }
+}

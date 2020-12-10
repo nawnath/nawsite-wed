@@ -1,0 +1,115 @@
+@import './../../scss/variables';
+.sidebar-container{
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    padding: 20px 0px 0px 0px;
+    background-color: $white;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    overflow-y: scroll;
+    transition: all 500ms linear;
+    .main-menu {
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0px;
+            text-align: left;
+            li{
+                position: relative;
+                a{
+                    padding: 15px 20px 15px 20px;
+                    display: block;
+                    color: $black;
+                    text-decoration: none;
+                    z-index: 4;
+                    font-size: 15px;
+                }
+                .icon_up, .icon_down{
+                    position: absolute;
+                    top: 5px;
+                    font-size: 12px;
+                    right:-20px;
+                }
+            }
+            li:nth-last-child(2) {
+                &::before{
+                    content: none;
+                }
+            }
+            li:nth-child(even){background-color: #f2f2f2;}
+            li:hover {background-color: #ddd;}
+            .menu-item{
+                span{
+                    position: relative;
+                }
+            }
+            .sub-menu-1{
+                background-color: $borderColor;
+                ul {
+                    .sub-menu-item{
+                        a{
+                            font-size: 14px;
+                            padding: 15px 15px 15px 0px;
+                            display: block;
+                            border-bottom: 1px solid lighten($color: $bg-black, $amount: 60);
+                            text-decoration: none;
+                            color: $black;
+                            background-color: $borderColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .icon_close{
+        cursor: pointer;
+        z-index: 6;
+        position: absolute;
+        right: 20px;
+        font-size: 16px;
+        color: $black;
+        font-weight: bold;
+        top: 20px;
+    }
+    .top-section{
+        display: flex;
+        padding: 0px 20px 10px;
+        .home--side-title{
+            margin: auto 0;
+            margin-left: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: $black;
+        }
+        .logo{
+            width: 180px;
+            height: 50px;
+        }
+        img{
+            width: 70%;
+        }
+    }
+}
+
+.active {
+    left: 0;
+}
+
+.logout{
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+    .span-tag{
+        background-color: #1fc8db;
+        padding: 15px 20px 15px 20px;
+        display: block;
+        color: $white;
+        text-decoration: none;
+        z-index: 4;
+        font-size: 15px;
+        border: 1px solid;
+    }
+}

@@ -1,0 +1,171 @@
+@import './../../../scss/variables';
+@media (min-width: 1200px){
+    .section-slick-container{
+        width: 100%;
+    }
+}
+.section-slick-container{
+    i {
+        &.icon_star_filled, &.icon_star {
+            margin-left: 3px;
+            font-size: 14px;
+        }
+    }
+    .section-slick-wrapper{
+        margin-top: 30px;
+        h3{
+            padding: 20px;
+        }
+    }
+
+    .tab-headers{
+        padding: 0px 20px;
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: inline-flex;
+            li{
+                padding: 0 40px 0 0 ;
+                position: relative;
+                background-color: $white;
+                border-bottom: 1px solid $borderColor;
+                .item-head{
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    cursor: pointer;
+                    border-bottom: 3px solid transparent;
+                    position: relative;
+                    display: block;
+                    text-decoration: none;
+                    color: $bg-black;
+                    padding: 15px 0px 15px 0px;
+                }
+
+                .active{
+                    border-bottom: 3px solid $red;
+                }
+            }
+            li:hover{
+                .sub-menu-1{
+                    display: block;
+                }
+            }
+        }
+    }
+    .tab-link{
+        padding: 20px;
+        font-size: 16px;
+        text-transform: capitalize;
+        color: $link-color;
+        font-weight: $medium;
+    }
+    .tab-contents{
+        padding: 0px 20px 20px 20px;
+        margin-top: 30px;
+        border-bottom: 1px solid $borderColor;
+        .swiper-container{
+            .swiper-wrapper{
+                height: auto;
+            }
+            .content-text{
+                padding: 20px;
+            }
+            .swiper-slide{
+                background-color: $white;
+                color: $bg-black;
+                img{
+                    width: 100%;
+                }
+                .icon_rupee{
+                    font-size: 12px;
+                    font-weight: $medium;
+                    margin-right: 4px;
+                    font-family: $font-montserrat;
+                }
+                .title{
+                    margin-bottom: 5px;
+                    font-size: 14px;
+                    color: lighten($color: $bg-black, $amount: 10);
+                    font-weight: $medium;
+                }
+                .desc{
+                    font-size: 12px;
+                    font-family: $font-montserrat-light;
+                }
+                .price{
+                    margin-bottom: 5px;
+                    font-size: 16px;
+                    color: lighten($color: $black, $amount: 10);
+                    font-weight: $medium;
+                }
+            }
+            .w--button{
+                border: 1px solid $red;
+                font-weight: $medium;
+                border-radius: 0;
+                letter-spacing: 0;
+                width: 100%;
+                margin-top: 10px;
+                color: $red;
+                background-color: $white;
+                outline: none;
+            }
+        }
+        .customcss{
+            height: 50px;
+            width: 50px;
+            display: block;
+            position: absolute;
+            // background: $white;
+            z-index: 10;
+            top: 100px;
+            border-radius: 100px;
+            &-prev{
+                @extend .customcss;
+                left: 0px;
+            }
+            &-next{
+                @extend .customcss;
+                right: 0px;
+            }
+        }
+        .swiper-button{
+            width: 24px;
+            height: 24px;
+            border: 2px solid $white;
+            border-top: 0;
+            border-left: 0;
+            position: absolute;
+            top: 20px;
+            z-index: 7;
+            cursor: pointer;
+            outline: none;
+            &-prev{
+                @extend .swiper-button;
+                transform: rotate(-225deg);
+                left: 22px;
+            }
+            &-next{
+                @extend .swiper-button;
+                transform: rotate(-45deg);
+                right: 22px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $screen-width-xxs + 1) {
+    .section-slick-container{
+        .tab-headers{
+            overflow-x: scroll;
+        }
+        .tab-contents{
+            .customcss{
+                top: 28%;
+            }
+        }
+    }
+}
